@@ -1,6 +1,21 @@
 <ion-content [fullscreen]="true">
-
-    <ion-button color="secondary">Teste</ion-button>
-    
-    
-</ion-content>
+    <ion-row>
+        <ion-col size="4">
+            <ion-item>
+                <ion-input type="text" label="Nome Completo" [(ngModel)]="this.usuario.name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" label="E-mail" [(ngModel)]="this.usuario.email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" label="Senha" [(ngModel)]="this.usuario.password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" label="Confirmar Senha" [(ngModel)]="this.usuario.password_confirmation"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-button (click)="this.registrar()">Registrar-se</ion-button>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-content> 
