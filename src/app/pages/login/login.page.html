@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="fazerLogin()">Entrar</ion-button>
+
+  <p *ngIf="erro" style="color: red;">{{ erro }}</p>
+</ion-content>
